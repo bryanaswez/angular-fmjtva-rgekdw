@@ -3,13 +3,14 @@ import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {MaterialExampleModule} from '../material.module';
-import {CdkDragDropOverviewExample} from './cdk-drag-drop-overview-example';
+import {SideBar} from './sidebar/sidebar';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatNativeDateModule} from '@angular/material/core';
 import {HttpClientModule} from '@angular/common/http';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
-  declarations: [CdkDragDropOverviewExample],
+  declarations: [SideBar, MenuComponent],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
@@ -20,6 +21,6 @@ import {HttpClientModule} from '@angular/common/http';
     ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [CdkDragDropOverviewExample],
+  bootstrap: [SideBar,MenuComponent],
 })
 export class AppModule {}
